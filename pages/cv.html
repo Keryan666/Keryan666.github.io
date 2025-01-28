@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Keryan Herhour</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <!-- Lien vers la feuille de style CV -->
+  <link rel="stylesheet" href="../css/cv.css">
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+
+    <header>
+        <h1>Portfolio - Keryan Herhour</h1>
+    </header>
+
+
+  <div class="container">
+
+    <!-- En-tête : Titre, Public, Branch, Code, tous sur la même ligne -->
+    <div class="repo-header">
+      <div class="repo-title">
+        <h1>Keryan Herhour</h1>
+        <span class="public-badge">Public</span>
+      </div>
+
+      <div class="repo-actions-line">
+        <a href="#" class="branch-btn">Branch: main</a>
+        <span class="branch-count">1 branch | 1 commit</span>
+        <!-- Bouton Code vert -->
+        <a href="#" class="code-btn"><>&nbsp;Code</a>
+      </div>
+    </div> <!-- /.repo-header -->
+
+    <!-- Corps principal : 2 colonnes -->
+    <div class="repo-body">
+
+      <!-- Colonne de gauche : “modifications” -->
+      <div class="modifications-wrapper">
+        <table class="file-list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Author</th>
+              <th>Commit</th>
+              <th>Last update</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="file-icon"></span>
+                <a href="#">Âge / Statut</a>
+              </td>
+              <td class="author">Keryan</td>
+              <td>
+                <a href="#" class="commit-msg">Infos perso (22 ans)</a><br>
+                <span class="commit-hash">ce8efd1</span>
+              </td>
+              <td><span class="time-ago">last month</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="file-icon"></span>
+                <a href="#">Diplômes</a>
+              </td>
+              <td class="author">Keryan</td>
+              <td>
+                <a href="#" class="commit-msg">Bac spé Maths/Physique + Brevet</a><br>
+                <span class="commit-hash">234abc3</span>
+              </td>
+              <td><span class="time-ago">2 weeks ago</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="file-icon"></span>
+                <a href="#">Expériences</a>
+              </td>
+              <td class="author">Keryan</td>
+              <td>
+                <a href="#" class="commit-msg">Alternance BTS SIO SLAM</a><br>
+                <span class="commit-hash">ce8ef99</span>
+              </td>
+              <td><span class="time-ago">2 weeks ago</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="file-icon"></span>
+                <a href="#">Passions</a>
+              </td>
+              <td class="author">Keryan</td>
+              <td>
+                <a href="#" class="commit-msg">Jeux vidéo, nouvelles tech</a><br>
+                <span class="commit-hash">af12d01</span>
+              </td>
+              <td><span class="time-ago">1 week ago</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="file-icon"></span>
+                <a href="#">Contact</a>
+              </td>
+              <td class="author">Keryan</td>
+              <td>
+                <a href="#" class="commit-msg">Ajout mail / LinkedIn</a><br>
+                <span class="commit-hash">bcd456e</span>
+              </td>
+              <td><span class="time-ago">5 days ago</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- /.modifications-wrapper -->
+
+      <!-- Colonne de droite : watchers/stars/forks -->
+      <div class="repo-stats-column">
+        <div class="stat-title">Statistics</div>
+
+        <!-- watchers -->
+        <div class="stat-item">
+          <svg height="16" width="16" fill="currentColor" aria-hidden="true" viewBox="0 0 16 16">
+            <path d="M1.73 8a6.27 6.27 0 0 1 .81-1.4C3.52 4.47 5.53 3 8 3s4.48 1.47 5.46 3.6a6.27 6.27 0 0 1 .81 1.4 6.27 6.27 0 0 1-.81 1.4C12.48 11.53 10.47 13 8 13s-4.48-1.47-5.46-3.6A6.27 6.27 0 0 1 1.73 8Z"/>
+            <path d="M8 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+          </svg>
+          Watch <span style="margin-left: 0.4rem;">1</span>
+        </div>
+
+        <!-- stars -->
+        <div class="stat-item">
+          <svg height="16" width="16" fill="currentColor" aria-hidden="true" viewBox="0 0 16 16">
+            <path d="M8 .25a.75.75 0 0 1 .67.417l1.6 3.247 3.588.522a.75.75 0 0 1 .416 1.279l-2.598 2.533.613 3.566a.75.75 0 0 1-1.088.791L8 11.347l-3.196 1.68A.75.75 0 0 1 3.716 12.236l.613-3.566L1.731 6.715a.75.75 0 0 1 .416-1.279l3.588-.522 1.6-3.247A.75.75 0 0 1 8 .25Z"/>
+          </svg>
+          Star <span style="margin-left:0.4rem;">1</span>
+        </div>
+
+        <!-- forks -->
+        <div class="stat-item">
+          <svg height="16" width="16" fill="currentColor" aria-hidden="true" viewBox="0 0 16 16">
+            <path d="M5.559 3.342 4.03 1.812a.75.75 0 1 1 1.06-1.06l1.469 1.47 1.469-1.47a.75.75 0 1 1 1.06 1.06l-1.528 1.53A2.75 2.75 0 0 1 7.75 4.75v5.259a2.75 2.75 0 0 1-1.06 2.166l1.528 1.53a.75.75 0 0 1-1.06 1.06L6.03 13.303l-1.469 1.47a.75.75 0 1 1-1.06-1.06l1.528-1.53A2.75 2.75 0 0 1 5.75 10.01V4.75a2.75 2.75 0 0 1-.191-1.408Z"/>
+          </svg>
+          Fork <span style="margin-left:0.4rem;">0</span>
+        </div>
+      </div><!-- /.repo-stats-column -->
+
+    </div><!-- /.repo-body -->
+
+    <!-- README encadré -->
+    <div class="readme-section">
+      <h2>README</h2>
+      <p>
+        Âge : 22 ans <br>
+        Diplômes : Bac spé Maths &amp; Physique, Brevet <br>
+        Expériences : Alternance BTS SIO SLAM (Développement) <br>
+        Passions : Jeux vidéo, nouvelles technologies <br>
+        <a href="contact.html">Contact</a>
+      </p>
+      <p>
+        J’aime concevoir des applications web et mobiles,
+        apprendre de nouvelles technologies, et contribuer
+        à des projets en équipe. Mon parcours en BTS SIO SLAM
+        me permet d'acquérir des compétences en développement
+        (front et back), bases de données et gestion de projet.<br>
+        Dans le futur, je souhaite approfondir mes connaissances
+        en cybersécurité et déployer des solutions toujours plus
+        performantes et sécurisées. 
+      </p>
+      <ul>
+        <li>Travail en équipe et méthodes agiles</li>
+        <li>Veille technologique constante</li>
+        <li>Participation à des projets open source</li>
+      </ul>
+      <p>
+        Merci pour votre visite&nbsp;! Pour revenir à la page d'accueil, cliquez sur le bouton ci-dessous.
+      </p>
+      <div class="btn-home-container">
+        <a href="../index.html" class="btn-home">Retour à l'accueil</a>
+      </div>
+    </div><!-- /.readme-section -->
+
+  </div> <!-- /.container -->
+
+  <footer>
+    <p>© 2025 Keryan Herhour - Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

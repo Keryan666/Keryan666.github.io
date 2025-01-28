@@ -1,0 +1,244 @@
+/* ----------------------------------------------
+   Reset & Base
+---------------------------------------------- */
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0d1117; /* Fond sombre GitHub-like */
+    color: #c9d1d9;
+    line-height: 1.5;
+  }
+  a {
+    color: #58a6ff;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* ----------------------------------------------
+     Repo Header
+  ---------------------------------------------- */
+  .repo-header {
+    border-bottom: 1px solid #21262d;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  .repo-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .repo-title h1 {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .repo-title .public-badge {
+    border: 1px solid #c9d1d9;
+    border-radius: 3px;
+    padding: 0.1rem 0.4rem;
+    color: #c9d1d9;
+    font-size: 0.85rem;
+    background-color: transparent;
+  }
+  
+  /* Sur la même ligne : Branch + commit + bouton Code */
+  .repo-actions-line {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .branch-btn {
+    border: 1px solid #30363d;
+    background-color: #21262d;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    color: #c9d1d9;
+    text-decoration: none;
+  }
+  .branch-btn:hover {
+    background-color: #30363d;
+  }
+  .branch-count {
+    color: #8b949e;
+    font-size: 0.85rem;
+  }
+  /* Bouton Code vert sur la même ligne */
+  .code-btn {
+    background-color: #238636; /* vert GitHub */
+    border: 1px solid #2ea043;
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+  }
+  .code-btn:hover {
+    background-color: #2ea043;
+  }
+  
+  /* ----------------------------------------------
+     Body en 2 colonnes
+  ---------------------------------------------- */
+  .repo-body {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  /* Colonne gauche : “modifications” */
+  .modifications-wrapper {
+    flex: 1;
+    border: 1px solid #21262d;
+    border-radius: 6px;
+    background-color: #161b22;
+    padding: 1rem;
+  }
+  .file-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+  }
+  .file-list thead {
+    background-color: #161b22;
+  }
+  .file-list th {
+    text-align: left;
+    padding: 0.6rem;
+    font-size: 0.85rem;
+    color: #8b949e;
+    border-bottom: 1px solid #21262d;
+  }
+  .file-list td {
+    padding: 0.6rem;
+    border-bottom: 1px solid #21262d;
+    vertical-align: middle;
+    font-size: 0.9rem;
+  }
+  .file-icon {
+    display: inline-block;
+    width: 16px; 
+    height: 16px;
+    background-color: #58a6ff; 
+    border-radius: 3px;
+    margin-right: 0.5rem;
+  }
+  .commit-msg {
+    color: #58a6ff;
+  }
+  .author {
+    color: #8b949e;
+    font-size: 0.85rem;
+  }
+  .commit-hash {
+    color: #8b949e;
+    font-size: 0.75rem;
+  }
+  .time-ago {
+    color: #8b949e;
+    font-size: 0.75rem;
+  }
+  
+  /* Colonne droite : watchers/stars/forks */
+  .repo-stats-column {
+    width: 220px; /* fixe, ajustable */
+    border: 1px solid #21262d;
+    border-radius: 6px;
+    background-color: #161b22;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: fit-content;
+  }
+  .stat-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+  .stat-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #30363d;
+    background-color: #21262d;
+    color: #c9d1d9;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+  }
+  .stat-item svg {
+    margin-right: 0.4rem;
+  }
+  .stat-item:hover {
+    background-color: #30363d;
+  }
+  
+  /* ----------------------------------------------
+     README encadré
+  ---------------------------------------------- */
+  .readme-section {
+    border: 1px solid #21262d;
+    border-radius: 6px;
+    background-color: #161b22;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  .readme-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  .readme-section p {
+    margin-bottom: 1rem;
+  }
+  .readme-section ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .readme-section li {
+    margin: 0.3rem 0;
+  }
+  
+  /* Bouton retour à l'accueil */
+  .btn-home-container {
+    margin-top: 1rem;
+  }
+  .btn-home {
+    display: inline-block;
+    background-color: #161b22;
+    color: #ffffff;
+    padding: 0.6rem 1rem; 
+    border-radius: 6px;
+    text-decoration: none;
+    border: 2px solid #58a6ff;
+    transition: background-color 0.2s;
+    font-size: 0.85rem;
+  }
+  .btn-home:hover {
+    background-color: #58a6ff;
+    color: #0d1117;
+  }
+  
+  /* ----------------------------------------------
+     Footer
+  ---------------------------------------------- */
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #21262d;
+    margin-top: 2rem;
+    color: #8b949e;
+  }
+  
