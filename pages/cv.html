@@ -1,18 +1,63 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Keryan Herhour</title>
-  <link rel="icon" type="image/x-icon" href="../favicon.ico">
-  <!-- Lien vers la feuille de style CV -->
-  <link rel="stylesheet" href="../css/cv.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Keryan Herhour</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Lien Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+    crossorigin="anonymous">
+
+  <!-- Lien Font Awesome 4.7.0 -->
+  <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Lien vers ta feuille de style perso -->
   <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/cv.css">
 </head>
 <body>
 
-    <header>
-        <h1>Portfolio - Keryan Herhour</h1>
-    </header>
+  <header>
+    <!-- Barre de navigation Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <!-- Branding (texte principal ou logo) -->
+      <a class="navbar-brand" href="../index.html">
+        Portfolio - Keryan Herhour
+      </a>
+
+      <!-- Contenu de la navbar (liens) -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <!-- CV -->
+          <li class="nav-item">
+            <a class="nav-link" href="cv.html">
+              <i class="fa fa-file-text-o"></i>
+              CV
+            </a>
+          </li>
+          <!-- Réalisations -->
+          <li class="nav-item">
+            <a class="nav-link" href="realisation.html">
+              <i class="fa fa-briefcase"></i>
+              Réalisations
+            </a>
+          </li>
+          <!-- Contact -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">
+              <i class="fa fa-envelope-o"></i>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
 
   <div class="container">
@@ -145,11 +190,14 @@
 
     <!-- README encadré -->
     <div class="readme-section">
+    
       <h2>README</h2>
       <p>
         Âge : 22 ans <br>
         Diplômes : Bac spé Maths &amp; Physique, Brevet <br>
+        Langues : Français (courant), Anglais (professionnel) <br>
         Expériences : Alternance BTS SIO SLAM (Développement) <br>
+        Compétences : Python, C#, WinDev, Git, Docker, Entity Framework <br>
         Passions : Jeux vidéo, nouvelles technologies <br>
         <a href="contact.html">Contact</a>
       </p>
@@ -159,21 +207,14 @@
         à des projets en équipe. Mon parcours en BTS SIO SLAM
         me permet d'acquérir des compétences en développement
         (front et back), bases de données et gestion de projet.<br>
-        Dans le futur, je souhaite approfondir mes connaissances
-        en cybersécurité et déployer des solutions toujours plus
-        performantes et sécurisées. 
+
       </p>
       <ul>
-        <li>Travail en équipe et méthodes agiles</li>
+        <li>Travail en équipe et tableau kanban</li>
         <li>Veille technologique constante</li>
         <li>Participation à des projets open source</li>
       </ul>
-      <p>
-        Merci pour votre visite&nbsp;! Pour revenir à la page d'accueil, cliquez sur le bouton ci-dessous.
-      </p>
-      <div class="btn-home-container">
-        <a href="../index.html" class="btn-home">Retour à l'accueil</a>
-      </div>
+
     </div><!-- /.readme-section -->
 
   </div> <!-- /.container -->
@@ -181,5 +222,9 @@
   <footer>
     <p>© 2025 Keryan Herhour - Tous droits réservés.</p>
   </footer>
+
+  <!-- Scripts Bootstrap et jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
 </html>

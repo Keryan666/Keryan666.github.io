@@ -6,13 +6,62 @@
   <title>Portfolio - Keryan Herhour</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- Lien vers la feuille de style externe -->
+  <!-- Lien Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+    crossorigin="anonymous">
+
+  <!-- Lien Font Awesome 4.7.0 -->
+  <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Lien vers ta feuille de style perso -->
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
   <header>
-    <h1>Portfolio - Keryan Herhour</h1>
+    <!-- Barre de navigation Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <!-- Branding (texte principal ou logo) -->
+      <a class="navbar-brand" href="#">
+        Portfolio - Keryan Herhour
+      </a>
+
+      <!-- Bouton hamburger pour mobile -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Contenu de la navbar (liens) -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <!-- CV -->
+          <li class="nav-item">
+            <a class="nav-link" href="pages/cv.html">
+              <i class="fa fa-file-text-o"></i>
+              CV
+            </a>
+          </li>
+          <!-- Réalisations -->
+          <li class="nav-item">
+            <a class="nav-link" href="pages/realisation.html">
+              <i class="fa fa-briefcase"></i>
+              Réalisations
+            </a>
+          </li>
+          <!-- Contact -->
+          <li class="nav-item">
+            <a class="nav-link" href="pages/contact.html">
+              <i class="fa fa-envelope-o"></i>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <main>
@@ -40,7 +89,6 @@
 
       <!-- Tableau 2 colonnes pour 3 blocs -->
       <table class="links-table">
-        <!-- 1re ligne : 2 blocs -->
         <tr>
           <td>
             <span class="badge">Public</span>
@@ -61,7 +109,6 @@
             </div>
           </td>
         </tr>
-        <!-- 2e ligne : 1 bloc (Contact) -->
         <tr>
           <td>
             <span class="badge">Public</span>
@@ -74,58 +121,67 @@
         </tr>
       </table>
 
-      <!-- Section d'activité récente, en dehors du tableau -->
-      <div class="commit-section">
-        <h3>Activité récente</h3>
-        <!-- Plusieurs lignes, ~30 colonnes chacune -->
-        <table class="commit-table">
-          <tr>
-            <!-- ~30 colonnes -->
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-          </tr>
-          <tr>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-          </tr>
-          <tr>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-          </tr>
-          <tr>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-          </tr>
-          <tr>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <!-- Cellule avec lien caché -->
-            <td><a href="https://pouler.fr/" style="display: block; width: 100%; height: 100%;"></a></td>
-            <td></td><td></td>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-          </tr>
-          <tr>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-          </tr>
-          <tr>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <td></td>
-            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </main>
+            <!-- Section d'activité récente, en dehors du tableau -->
+            <div class="commit-section">
+              <h3>Activité récente</h3>
+              <!-- Plusieurs lignes, ~30 colonnes chacune -->
+              <table class="commit-table">
+                <tr>
+                  <!-- ~30 colonnes -->
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <!-- Cellule avec lien caché -->
+                  <td><a href="https://pouler.fr/" style="display: block; width: 100%; height: 100%;"></a></td>
+                  <td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                  <td></td>
+                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </main>
 
   <footer>
     <p>© 2025 Keryan Herhour - Tous droits réservés.</p>
   </footer>
+
+  <!-- Scripts Bootstrap et jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+
 </body>
 </html>

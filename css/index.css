@@ -2,271 +2,295 @@
    Reset et structure de base
 ---------------------------------------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    height: 100%;
-    background-color: #0d1117; /* Fond global sombre */
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #c9d1d9;
-  }
-  
-  a {
-    color: #58a6ff;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  /* ----------------------------------------------
-     Header
-  ---------------------------------------------- */
-  header {
-    background-color: #161b22;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-  }
-  header h1 {
-    font-size: 1.5rem;
-    color: #ffffff;
-  }
-  
-  /* ----------------------------------------------
-     Contenu principal
-  ---------------------------------------------- */
-  main {
-    flex: 1; /* Permet de "pousser" le footer en bas si le contenu est court */
-    display: flex;
-    max-width: 1200px;
-    margin: 1rem auto;
-    padding: 1rem;
-    gap: 2rem; 
-  }
-  
-  /* ----------------------------------------------
-     Section profil (gauche)
-  ---------------------------------------------- */
-  .profile {
-    flex: 1;
-    max-width: 250px;
-    text-align: center;
-    padding: 1rem;
-  }
-  /* Photo de profil ronde */
-  .profile .profile-pic {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    border: 3px solid #30363d;
-  }
-  .profile h2 {
-    margin-top: 1rem;
-    color: #ffffff;
-  }
-  .profile p {
-    color: #8b949e;
-    margin-top: 0.5rem;
-  }
-  
-  /* Barre noire, large de 100%, 25px sous le texte */
-  .profile hr {
-    margin: 25px 0 0 0; /* 25px au-dessus, pas de margin-left pour coller à gauche */
-    width: 100%;        /* aussi large que la section */
-    border: 1px solid #000; /* noire et fine */
-  }
-  
-  /* "Highlighter" en blanc, petit, aligné à gauche */
-  .highlighter-title {
-    margin-top: 5px;
-    text-align: left;
-    color: #ffffff;   /* en blanc */
-    font-size: 0.8rem;
-    margin-left: 0;   /* collé à gauche */
-  }
-  
-  /* Image surligneur, non ronde, alignée à gauche */
-  .surligneur {
-    display: block;
-    margin: 10px 0 0 0; /* 10px sous le texte */
-    border-radius: 0;   /* pas de forme ronde */
-    width: 100%;        /* s'étend sur la largeur de .profile */
-    border: none;
-  }
-  
-  /* ----------------------------------------------
-     Section contenu (droite)
-  ---------------------------------------------- */
-  .content {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-  }
-  .content h3 {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    color: #8b949e;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  /* ----------------------------------------------
-     Tableau de 2 colonnes (3 blocs)
-     On applique border-spacing: 1rem pour
-     un espace horizontal & vertical entre les blocs
-  ---------------------------------------------- */
-  .links-table {
-    width: 100%;
-    border-collapse: separate;
-    /* 1rem d'espacement entre colonnes & lignes */
-    border-spacing: 1rem; 
-  }
-  .links-table td {
-    vertical-align: top;
-    background-color: #161b22; 
-    border: 1px solid #30363d;
-    border-radius: 8px;
-    padding: 1.2rem;
-    transition: transform 0.2s;
-    position: relative;
-  }
-  .links-table td:hover {
-    transform: translateY(-5px);
-    border-color: #58a6ff;
-  }
-  .links-table td h4 {
-    margin-bottom: 0.5rem;
-    color: #ffffff;
-    font-size: 1.1rem;
-  }
-  .links-table td p {
-    color: #8b949e;
-    margin-bottom: 0.5rem;
-  }
-  .badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: transparent;
-    color: #c9d1d9;
-    padding: 2px 8px;
-    font-size: 0.75rem;
-    border: 1px solid #c9d1d9;
-    border-radius: 12px;
-    font-weight: bold;
-  }
-  .lang {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-  }
-  .lang-dot {
-    display: inline-block; 
-    width: 10px; 
-    height: 10px; 
-    border-radius: 50%;
-    margin-right: 5px;
-  }
-  
-  /* ----------------------------------------------
-     Activité récente (commit-section)
-     - Sans fond noir
-     - Cases bordées noir, vertes au survol
-  ---------------------------------------------- */
-  .commit-section {
-    margin-top: 1rem;
-    margin-left: 0.2rem; /* Ajustez si besoin */
-  }
-  .commit-section h3 {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    color: #8b949e;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  .commit-table {
-    border-collapse: separate;
-    border-spacing: 3px; /* Espace entre les cases */
-  }
-  .commit-table td {
-    width: 14px;
-    height: 14px;
-    border-radius: 2px;
-    background-color: #161b22;
-    border: 1px solid #000;   /* fine bordure noire */
-    transition: background-color 0.2s;
-    cursor: pointer;
-  }
-  .commit-table td:hover {
-    background-color: #2ea043; /* vert au survol */
-  }
-  
-  /* ----------------------------------------------
-     Footer
-  ---------------------------------------------- */
-  footer {
-    background-color: #161b22;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: auto; /* "Colle" le footer en bas si le contenu est court */
-  }
-  footer p {
-    color: #8b949e;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: #0d1117; /* Fond global sombre */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #c9d1d9;
+}
+
+a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------------------------------------
+ Header
+---------------------------------------------- */
+header {
+  background-color: #161b22;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+/* ----------------------------------------------
+ Contenu principal
+---------------------------------------------- */
+main {
+  flex: 1; /* Permet de "pousser" le footer en bas si le contenu est court */
+  display: flex;
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 1rem;
+  gap: 2rem; 
+}
+
+/* ----------------------------------------------
+ Section profil (gauche)
+---------------------------------------------- */
+.profile {
+  flex: 1;
+  max-width: 250px;
+  text-align: center;
+  padding: 1rem;
+}
+/* Photo de profil ronde */
+.profile .profile-pic {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 3px solid #30363d;
+}
+.profile h2 {
+  margin-top: 1rem;
+  color: #ffffff;
+}
+.profile p {
+  color: #8b949e;
+  margin-top: 0.5rem;
+}
+
+/* Barre noire, large de 100%, 25px sous le texte */
+.profile hr {
+  margin: 25px 0 0 0; /* 25px au-dessus, pas de margin-left pour coller à gauche */
+  width: 100%;        /* aussi large que la section */
+  border: 1px solid #000; /* noire et fine */
+}
+
+/* "Highlighter" en blanc, petit, aligné à gauche */
+.highlighter-title {
+  margin-top: 5px;
+  text-align: left;
+  color: #ffffff;   /* en blanc */
+  font-size: 0.8rem;
+  margin-left: 0;   /* collé à gauche */
+}
+
+/* Image surligneur, non ronde, alignée à gauche */
+.surligneur {
+  display: block;
+  margin: 10px 0 0 0; /* 10px sous le texte */
+  border-radius: 0;   /* pas de forme ronde */
+  width: 100%;        /* s'étend sur la largeur de .profile */
+  border: none;
+}
+
+/* ----------------------------------------------
+ Section contenu (droite)
+---------------------------------------------- */
+.content {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+.content h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ----------------------------------------------
+ Tableau de 2 colonnes (3 blocs)
+ On applique border-spacing: 1rem pour
+ un espace horizontal & vertical entre les blocs
+---------------------------------------------- */
+.links-table {
+  width: 100%;
+  border-collapse: separate;
+  /* 1rem d'espacement entre colonnes & lignes */
+  border-spacing: 1rem; 
+}
+.links-table td {
+  vertical-align: top;
+  background-color: #161b22; 
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1.2rem;
+  transition: transform 0.2s;
+  position: relative;
+}
+.links-table td:hover {
+  transform: translateY(-5px);
+  border-color: #58a6ff;
+}
+.links-table td h4 {
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+.links-table td p {
+  color: #8b949e;
+  margin-bottom: 0.5rem;
+}
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: #c9d1d9;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  border: 1px solid #c9d1d9;
+  border-radius: 12px;
+  font-weight: bold;
+}
+.lang {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+.lang-dot {
+  display: inline-block; 
+  width: 10px; 
+  height: 10px; 
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* ----------------------------------------------
+ Activité récente (commit-section)
+ - Sans fond noir
+ - Cases bordées noir, vertes au survol
+---------------------------------------------- */
+.commit-section {
+  margin-top: 1rem;
+  margin-left: 0.2rem; /* Ajustez si besoin */
+}
+.commit-section h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.commit-table {
+  border-collapse: separate;
+  border-spacing: 3px; /* Espace entre les cases */
+}
+.commit-table td {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  background-color: #161b22;
+  border: 1px solid #000;   /* fine bordure noire */
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+.commit-table td:hover {
+  background-color: #2ea043; /* vert au survol */
+}
+
+/* ----------------------------------------------
+ Footer
+---------------------------------------------- */
+footer {
+  background-color: #161b22;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto; /* "Colle" le footer en bas si le contenu est court */
+}
+footer p {
+  color: #8b949e;
+}
 
 /* -----------------------------
-   Agrandir les icônes
+ Agrandir les icônes
 ----------------------------- */
 .social-icons img {
-    width: 50px;  /* Ajustez selon la taille désirée */
-    height: 50px;
-    transition: transform 0.2s;
-    cursor: pointer;
-  }
-  .social-icons img:hover {
-    transform: scale(1.1);
-  }
-  
-  /* On centre toujours la rangée d’icônes */
-  .social-icons {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center; /* centrage horizontal */
-    gap: 2rem;              /* plus d'espace entre icônes */
-  }
-  
-  /* -----------------------------
-     Bouton "Retour à l'accueil"
-  ----------------------------- */
-  .btn-home-container {
-    text-align: center; /* centre le bouton au dessous des icônes */
-    margin-top: 2rem;
-  }
-  
-  .btn-return-home {
-    display: inline-block;
-    background-color: #161b22; 
-    color: #ffffff;
-    padding: 0.8rem 1.5rem; 
-    border-radius: 6px;
-    text-decoration: none;
-    border: 2px solid #58a6ff; /* ou #30363d, ajustez selon vos goûts */
-    transition: background-color 0.2s;
-    font-size: 1rem;
-  }
-  
-  .btn-return-home:hover {
-    background-color: #58a6ff; 
-    color: #0d1117; /* Inverse la couleur de texte pour contraste */
-  }
+  width: 50px;  /* Ajustez selon la taille désirée */
+  height: 50px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* On centre toujours la rangée d’icônes */
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center; /* centrage horizontal */
+  gap: 2rem;              /* plus d'espace entre icônes */
+}
+
+/* -----------------------------
+ Bouton "Retour à l'accueil"
+----------------------------- */
+.btn-home-container {
+  text-align: center; /* centre le bouton au dessous des icônes */
+  margin-top: 2rem;
+}
+
+.btn-return-home {
+  display: inline-block;
+  background-color: #161b22; 
+  color: #ffffff;
+  padding: 0.8rem 1.5rem; 
+  border-radius: 6px;
+  text-decoration: none;
+  border: 2px solid #58a6ff; /* ou #30363d, ajustez selon vos goûts */
+  transition: background-color 0.2s;
+  font-size: 1rem;
+}
+
+.btn-return-home:hover {
+  background-color: #58a6ff; 
+  color: #0d1117; /* Inverse la couleur de texte pour contraste */
+}
+
+
+
+/* Garde la navbar avec le même style de fond et de couleur */
+.navbar {
+  background-color: #161b22 !important;
+}
+
+/* Le "titre" (brand) garde la taille d'origine (1.5rem) */
+.navbar-brand {
+  font-size: 1.5rem !important; 
+  color: #ffffff !important;
+}
+
+/* Les liens de la navbar sont un peu plus petits (ex: 1.2rem) */
+.navbar-nav .nav-link {
+  font-size: 1.2rem !important; 
+  color: #ffffff !important;
+}
+
+/* Survol des liens en bleu */
+.navbar-nav .nav-link:hover {
+  color: #58a6ff !important;
+}
